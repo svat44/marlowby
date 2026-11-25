@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: clip;
+  isolation: isolate;
+  background: var(--ink);
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform-origin: 50% 40%;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Heaviest behind the headline (bottom left), lighter where the skyline reads */
+.hero__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top right, var(--ink) 35%, rgb(20 16 12 / 0.62) 100%);
+}
+
+.hero__copy {
+  align-self: end;
+  padding: 0 var(--gutter) clamp(2rem, 6vh, 4.5rem);
+}
+
+.hero__line {
+  max-width: 15ch;
+  font-family: var(--font-serif);
+  font-size: var(--step-4);
+  font-weight: 380;
+  font-variation-settings: 'opsz' 72;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+
+.hero__word {
+  display: inline-block;
+  white-space: pre;
+}
+
+.hero__sign {
+  display: block;
+  margin-top: 0.12em;
+  font-style: italic;
+  font-weight: 460;
+  color: var(--orange);
+}
+
+.hero__foot {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem var(--gutter) 1.5rem;
+  border-top: 1px solid rgb(255 237 215 / 0.16);
+}
+
+.hero__place {
+  margin-right: auto;
+  color: var(--cream-muted);
+}
+
+.hero__cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  font-size: var(--step--1);
+  font-weight: 600;
+  font-variation-settings: 'wdth' 112;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.hero__cue-icon {
+  width: 1rem;
+  animation: cue 2.4s var(--ease-out) infinite;
+}
+
+@keyframes cue {
+  0%, 100% { transform: translateY(-2px); }
+  50% { transform: translateY(3px); }
+}
+
+.hero__toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 237 215 / 0.12);
+  color: var(--cream);
+  cursor: pointer;
+  transition: background-color 0.25s var(--ease-out);
+}
+
+.hero__toggle:hover {
+  background: rgb(255 237 215 / 0.22);
+}
+
+.hero__toggle svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 640px) {
+  .hero__place {
+    display: none;
+  }
+
+  .hero__cue {
+    margin-right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__cue-icon {
+    animation: none;
+  }
+}

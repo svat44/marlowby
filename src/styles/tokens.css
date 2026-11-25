@@ -1,0 +1,35 @@
+:root {
+  /* Palette: oryzo.ai's color scheme, per PRODUCT.md */
+  --ink: #14100c;
+  --ink-raised: #1f1913;
+  --cream: #ffedd7;
+  --cream-muted: #cdbba6;
+  --olive: #445231;
+  --olive-deep: #36421f;
+  --orange: #dc5000;
+  --orange-hover: #f05a05;
+  --kraft: #b98a55;
+  --kraft-side: #9c7040;
+  --kraft-dark: #7d5730;
+
+  /* New York, the first city's accent */
+  --city-accent: var(--orange);
+
+  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-serif: 'Literata Variable', 'Literata', Georgia, serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.13rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.2vw, 2.25rem);
+  --step-3: clamp(2.2rem, 1.6rem + 2.8vw, 3.75rem);
+  --step-4: clamp(2.8rem, 1.8rem + 4.6vw, 6rem);
+
+  --gutter: clamp(1rem, 0.4rem + 3vw, 3rem);
+  --section: clamp(5rem, 3rem + 9vw, 11rem);
+  --measure: 62ch;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+}

@@ -1,0 +1,22 @@
+.statement {
+  padding: var(--section) var(--gutter);
+}
+
+.statement__text {
+  max-width: 20ch;
+  font-size: var(--step-3);
+  font-weight: 620;
+  font-variation-settings: 'wdth' 108;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.statement__word {
+  display: inline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .statement__word {
+    opacity: 1 !important;
+  }
+}
