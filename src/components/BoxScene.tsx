@@ -40,9 +40,9 @@ const ITEMS: Item[] = [
 // The goods inside the box, in list order. Positions are fractions of the box's width and depth.
 const GOODS: Good[] = [
   { label: 'Babka', x: 0.06, z: -0.28, w: 0.24, h: 0.62, tone: 'cream' },
-  { label: 'Cookies', x: 0.33, z: -0.3, w: 0.22, h: 0.78, tone: 'olive' },
+  { label: 'Cookies', x: 0.33, z: -0.3, w: 0.22, h: 0.78, tone: 'teal' },
   { label: 'Za’atar', x: 0.58, z: -0.18, w: 0.15, h: 0.62, tone: 'kraft' },
-  { label: 'Coffee', x: 0.74, z: -0.3, w: 0.2, h: 0.86, tone: 'orange' },
+  { label: 'Coffee', x: 0.74, z: -0.3, w: 0.2, h: 0.86, tone: 'coral' },
   { label: 'Map', x: 0.16, z: 0.02, w: 0.34, h: 0.46, tone: 'map' },
 ]
 

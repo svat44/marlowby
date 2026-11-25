@@ -12,15 +12,16 @@
 }
 
 .nav--solid {
-  background: rgb(20 16 12 / 0.94);
-  box-shadow: 0 1px 0 rgb(255 237 215 / 0.08);
+  background: rgb(10 54 52 / 0.96);
+  box-shadow: 0 1px 0 rgb(243 233 215 / 0.08);
 }
 
 .nav__mark {
   margin-right: auto;
   font-size: 1.3rem;
-  font-weight: 800;
-  font-variation-settings: 'wdth' 125;
+  font-family: var(--font-display);
+  word-spacing: var(--display-word-space);
+  font-weight: 900;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   text-decoration: none;
@@ -33,8 +34,7 @@
   padding: 0;
   list-style: none;
   font-size: var(--step--1);
-  font-weight: 550;
-  font-variation-settings: 'wdth' 112;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }

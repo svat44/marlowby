@@ -16,8 +16,9 @@
   grid-area: title;
   align-self: end;
   font-size: var(--step-4);
-  font-weight: 800;
-  font-variation-settings: 'wdth' 125;
+  font-family: var(--font-display);
+  word-spacing: var(--display-word-space);
+  font-weight: 900;
   line-height: 0.98;
   letter-spacing: -0.035em;
   text-transform: uppercase;
@@ -31,7 +32,7 @@
   font-style: italic;
   text-transform: none;
   letter-spacing: -0.02em;
-  color: var(--orange);
+  color: var(--coral-ink);
 }
 
 .closing .closing__box {
@@ -41,7 +42,7 @@
 }
 
 .closing .box__shadow {
-  background: radial-gradient(closest-side, rgb(20 16 12 / 0.28), transparent);
+  background: radial-gradient(closest-side, rgb(20 34 33 / 0.28), transparent);
 }
 
 .closing__actions {
@@ -59,7 +60,7 @@
 
 .closing .btn--ghost {
   color: var(--ink);
-  box-shadow: inset 0 0 0 1px rgb(20 16 12 / 0.4);
+  box-shadow: inset 0 0 0 1px rgb(20 34 33 / 0.4);
 }
 
 .closing .btn--ghost:hover {
@@ -84,4 +85,18 @@
   .closing__actions {
     margin-top: 1rem;
   }
+}
+
+/* Coral-ink keeps the action at 4.5:1 against cream; focus switches to ink on light ground */
+.closing .btn--primary {
+  background: var(--coral-ink);
+  color: var(--cream);
+}
+
+.closing .btn--primary:hover {
+  background: var(--ink);
+}
+
+.closing :focus-visible {
+  outline-color: var(--ink);
 }

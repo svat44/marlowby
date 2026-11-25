@@ -23,8 +23,9 @@ export default function Upcoming({ title, notFound = false }: { title: string; n
       <h1
         style={{
           fontSize: 'var(--step-4)',
-          fontWeight: 800,
-          fontVariationSettings: "'wdth' 125",
+          fontFamily: 'var(--font-display)',
+          wordSpacing: 'var(--display-word-space)',
+          fontWeight: 900,
           lineHeight: 0.95,
           letterSpacing: '-0.035em',
           textTransform: 'uppercase',

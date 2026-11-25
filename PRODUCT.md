@@ -51,8 +51,8 @@ Each box is one specific U.S. city, sourced from that city's own small businesse
 
 - Name: Marlowby.
 - Personality: warm, curious, local.
-- Palette: follow oryzo.ai's color scheme (user decision, 2026-11-25), replacing the earlier deep teal, coral and cream. Its roles: warm cream, near-black brown, olive green and burnt orange.
-- Craft and motion reference: oryzo.ai (cinematic scroll storytelling around one central object, very large display type, a serif for the voice lines).
+- Palette committed by the team: deep teal, coral and cream, chosen for accessible contrast and a kraft-paper box feel. (Briefly swapped for oryzo.ai's colors on 2026-11-25; the user restored the team palette the same day.)
+- oryzo.ai is inspiration only for motion, the 3D object treatment and craft level (cinematic scroll storytelling around one central object, very large display type, a serif for the voice lines). It is not a source of colors.
 - Layout: the classic subscription-box structure, chosen on purpose and executed at oryzo.ai's level of craft.
 - Homepage opens on New York footage (supplied by the user, used with the owner's permission) that fades into the line "Imagine you could have a whole city at home. That's Marlowby." set in a serif.
 - Each featured city gets its own accent color so every box feels distinct.

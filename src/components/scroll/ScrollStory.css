@@ -1,0 +1,258 @@
+/* The pinned scroll-through: one stage, scenes cross-dissolve around the box */
+.story {
+  position: relative;
+  height: 620vh;
+  background: var(--ground);
+}
+
+.story__stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: clip;
+  isolation: isolate;
+}
+
+.story__anchor {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.story__glow {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(70% 60% at 0% 100%, rgb(232 102 78 / 0.26), transparent 70%),
+    radial-gradient(50% 50% at 50% 55%, rgb(19 89 85 / 0.9), transparent 75%);
+}
+
+.story__video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform-origin: 50% 40%;
+}
+
+.story__hero {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 3;
+  padding: 0 var(--gutter) calc(clamp(2rem, 6vh, 4.5rem) + 5rem);
+}
+
+.story__object {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.story__canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Text beats */
+.story__beat {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 6.5rem var(--gutter) 5.5rem;
+  pointer-events: none;
+}
+
+.story__beat--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.story__big {
+  grid-column: 1;
+  font-family: var(--font-display);
+  word-spacing: var(--display-word-space);
+  font-size: clamp(2.4rem, 1.6rem + 3vw, 4.75rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.story__side {
+  grid-column: 3;
+  max-width: 26ch;
+  justify-self: end;
+  font-size: var(--step-2);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+}
+
+.story__beat--inside {
+  display: grid;
+  align-items: center;
+}
+
+.story__hello {
+  justify-self: center;
+  text-align: center;
+  font-family: var(--font-display);
+  word-spacing: var(--display-word-space);
+  font-size: clamp(2.2rem, 1.2rem + 3.6vw, 5.25rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+.story__inside {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.story__lead {
+  grid-column: 1;
+}
+
+.story__lead .story__big {
+  font-size: clamp(2rem, 1.3rem + 2.4vw, 3.75rem);
+}
+
+.story__note {
+  margin-top: 1.25rem;
+  max-width: 30ch;
+  color: var(--cream-muted);
+}
+
+.story__sample {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--cream-muted);
+}
+
+.story__makers {
+  grid-column: 3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.story__maker {
+  display: grid;
+  padding: 0.55rem 0;
+  border-top: 1px solid rgb(243 233 215 / 0.14);
+}
+
+.story__maker-name {
+  font-weight: 700;
+  font-size: var(--step-0);
+}
+
+.story__maker-place {
+  color: var(--cream-muted);
+}
+
+.story__maker-thing {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--cream-muted);
+}
+
+.story__beat--hello {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+}
+
+.story__issue {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  word-spacing: var(--display-word-space);
+  font-size: var(--step-1);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--city-accent);
+}
+
+.story__foot {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 4;
+}
+
+.story__progress {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  width: 4px;
+  height: 100%;
+  background: rgb(243 233 215 / 0.08);
+}
+
+.story__progress span {
+  display: block;
+  height: 100%;
+  background: var(--cream);
+  transform-origin: 50% 0;
+}
+
+@media (max-width: 860px) {
+  .story__beat {
+    padding: 5rem var(--gutter) 5rem;
+  }
+
+  .story__beat--split {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+  }
+
+  .story__big {
+    grid-row: 1;
+  }
+
+  .story__side {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    font-size: var(--step-1);
+  }
+
+  .story__beat--inside {
+    align-items: stretch;
+  }
+
+  .story__inside {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+  }
+
+  .story__makers {
+    grid-row: 3;
+  }
+
+  .story__note {
+    display: none;
+  }
+
+  .story__makers {
+    grid-column: 1;
+  }
+
+  .story__maker {
+    padding: 0.35rem 0;
+  }
+
+  .story__maker-thing {
+    display: none;
+  }
+
+  .story__maker-place {
+    font-size: var(--step--1);
+  }
+}

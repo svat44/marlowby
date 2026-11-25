@@ -1,0 +1,42 @@
+/* Team-chosen faces, both under the SIL Open Font License (see src/assets/fonts/*-OFL.txt). */
+
+/* Charger Pro, extended widths: headings and the wordmark.
+   Charger runs light, so each CSS weight maps one step heavier: 700 Extrabold, 800 Black, 900 Ultrablack. */
+@font-face {
+  font-family: 'Charger Pro Extended';
+  src: url('../assets/fonts/ChargerPro-ExtraboldExtended.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charger Pro Extended';
+  src: url('../assets/fonts/ChargerPro-BlackExtended.otf') format('opentype');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charger Pro Extended';
+  src: url('../assets/fonts/ChargerPro-UltrablackExtended.otf') format('opentype');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* Trueno: body, labels and controls */
+@font-face {
+  font-family: 'Trueno';
+  src: url('../assets/fonts/Trueno-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Trueno';
+  src: url('../assets/fonts/Trueno-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Trueno';
+  src: url('../assets/fonts/Trueno-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}

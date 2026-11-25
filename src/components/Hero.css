@@ -5,7 +5,7 @@
   grid-template-rows: 1fr auto;
   overflow: clip;
   isolation: isolate;
-  background: var(--ink);
+  background: var(--ground);
 }
 
 .hero__media {
@@ -25,7 +25,7 @@
 .hero__veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top right, var(--ink) 35%, rgb(20 16 12 / 0.62) 100%);
+  background: linear-gradient(to top right, var(--ground-deep) 35%, rgb(10 54 52 / 0.6) 100%);
 }
 
 .hero__copy {
@@ -53,7 +53,7 @@
   margin-top: 0.12em;
   font-style: italic;
   font-weight: 460;
-  color: var(--orange);
+  color: var(--coral);
 }
 
 .hero__foot {
@@ -61,7 +61,7 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1rem var(--gutter) 1.5rem;
-  border-top: 1px solid rgb(255 237 215 / 0.16);
+  border-top: 1px solid rgb(243 233 215 / 0.16);
 }
 
 .hero__place {
@@ -76,7 +76,6 @@
   min-height: 44px;
   font-size: var(--step--1);
   font-weight: 600;
-  font-variation-settings: 'wdth' 112;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -99,14 +98,14 @@
   height: 44px;
   border: 0;
   border-radius: 50%;
-  background: rgb(255 237 215 / 0.12);
+  background: rgb(243 233 215 / 0.12);
   color: var(--cream);
   cursor: pointer;
   transition: background-color 0.25s var(--ease-out);
 }
 
 .hero__toggle:hover {
-  background: rgb(255 237 215 / 0.22);
+  background: rgb(243 233 215 / 0.22);
 }
 
 .hero__toggle svg {

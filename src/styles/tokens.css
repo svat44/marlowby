@@ -1,21 +1,24 @@
 :root {
-  /* Palette: oryzo.ai's color scheme, per PRODUCT.md */
-  --ink: #14100c;
-  --ink-raised: #1f1913;
-  --cream: #ffedd7;
-  --cream-muted: #cdbba6;
-  --olive: #445231;
-  --olive-deep: #36421f;
-  --orange: #dc5000;
-  --orange-hover: #f05a05;
+  /* Palette: the team's Marlowby colors (deep teal, coral, cream), per PRODUCT.md */
+  --ground: #0e4a47; /* deep teal: dark sections. Cream on it 8.3:1 */
+  --ground-deep: #0a3634; /* hero veil and pinned nav */
+  --ground-raised: #135955;
+  --ink: #142221; /* text on cream and coral. On cream 13.9:1, on coral 5.0:1 */
+  --cream: #f3e9d7;
+  --cream-muted: #d8ccb7; /* secondary text on teal, 6.4:1 */
+  --coral: #e8664e; /* actions and the city mark. On teal 3.1:1 (large text only) */
+  --coral-hover: #f07a63;
+  --coral-ink: #b8432e; /* coral for text and buttons on cream, 4.5:1 */
   --kraft: #b98a55;
   --kraft-side: #9c7040;
   --kraft-dark: #7d5730;
 
-  /* New York, the first city's accent */
-  --city-accent: var(--orange);
+  /* Each city gets its own accent. New York uses coral. */
+  --city-accent: var(--coral);
 
-  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-display: 'Charger Pro Extended', 'Arial Black', system-ui, sans-serif;
+  --font-body: 'Trueno', system-ui, sans-serif;
+  --display-word-space: 0.24em; /* Charger's own space is only 0.11em */
   --font-serif: 'Literata Variable', 'Literata', Georgia, serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
 
@@ -31,5 +34,4 @@
   --measure: 62ch;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
 }

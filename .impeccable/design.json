@@ -1,53 +1,389 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-25T00:00:00Z",
+  "generatedAt": "2026-11-25T12:00:00Z",
   "title": "Design System: Marlowby",
   "extensions": {
     "colorMeta": {
-      "orange": { "role": "primary", "displayName": "Burnt Signal Orange", "canonical": "oklch(61.4% 0.188 41)", "tonalRamp": ["#230000", "#560000", "#8a0000", "#b12400", "#da4e00", "#f28156", "#fcb69d", "#ffe9e1"] },
-      "orange-hover": { "role": "primary", "displayName": "Lit Orange", "canonical": "oklch(65.8% 0.199 41)", "tonalRamp": ["#240000", "#580000", "#8d0000", "#b51a00", "#de4900", "#f57f50", "#feb59a", "#ffe9e0"] },
-      "olive": { "role": "secondary", "displayName": "Field Olive", "canonical": "oklch(41.7% 0.055 127)", "tonalRamp": ["#080d04", "#1f2912", "#3a4727", "#596745", "#798965", "#9dab8e", "#c4cdbb", "#edefea"] },
-      "kraft": { "role": "tertiary", "displayName": "Kraft", "canonical": "oklch(66.7% 0.090 68)", "tonalRamp": ["#150700", "#3a1d00", "#603700", "#825720", "#a67843", "#c39d74", "#dcc5ac", "#f4ede5"] },
-      "kraft-side": { "role": "tertiary", "displayName": "Kraft Side", "canonical": "oklch(58.0% 0.085 67)", "tonalRamp": ["#150800", "#391d00", "#5f3700", "#815726", "#a57848", "#c29d77", "#dbc5ae", "#f4ede6"] },
-      "kraft-dark": { "role": "tertiary", "displayName": "Kraft Dark", "canonical": "oklch(48.9% 0.074 65)", "tonalRamp": ["#140800", "#371e02", "#5d390f", "#7e5831", "#a17952", "#bf9e7e", "#dac5b2", "#f4ede7"] },
-      "ink": { "role": "neutral", "displayName": "Stage Ink", "canonical": "oklch(17.7% 0.010 67)", "tonalRamp": ["#0c0b09", "#282421", "#46413c", "#65605b", "#87817c", "#a9a4a0", "#cbc8c6", "#efeeed"] },
-      "ink-raised": { "role": "neutral", "displayName": "Raised Ink", "canonical": "oklch(21.8% 0.015 66)", "tonalRamp": ["#0d0b08", "#29241f", "#48413a", "#676059", "#898179", "#aaa49d", "#ccc8c4", "#efeeed"] },
-      "cream": { "role": "neutral", "displayName": "Lamplight Cream", "canonical": "oklch(95.5% 0.035 72)", "tonalRamp": ["#0f0a05", "#2d2317", "#4e3f2d", "#6e5e4b", "#907f6c", "#b0a392", "#d0c8be", "#f0eeeb"] },
-      "cream-muted": { "role": "neutral", "displayName": "Muted Cream", "canonical": "oklch(80.2% 0.035 71)", "tonalRamp": ["#0f0a05", "#2d2316", "#4e3f2d", "#6e5e4b", "#907f6c", "#b0a392", "#d0c8be", "#f1eeeb"] }
+      "ground": {
+        "role": "neutral",
+        "displayName": "Deep Teal",
+        "canonical": "oklch(37.2% 0.058 190)",
+        "tonalRamp": [
+          "#010e0d",
+          "#002b29",
+          "#0d4946",
+          "#316865",
+          "#528985",
+          "#73aba6",
+          "#a6cdca",
+          "#e6f1f0"
+        ]
+      },
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Night Teal",
+        "canonical": "oklch(30.3% 0.046 191)",
+        "tonalRamp": [
+          "#030e0d",
+          "#072a28",
+          "#1e4845",
+          "#3d6664",
+          "#5d8684",
+          "#7da8a5",
+          "#accbc9",
+          "#e8f1f0"
+        ]
+      },
+      "ground-raised": {
+        "role": "neutral",
+        "displayName": "Raised Teal",
+        "canonical": "oklch(42.2% 0.066 189)",
+        "tonalRamp": [
+          "#000f0d",
+          "#002c2a",
+          "#004b47",
+          "#286a65",
+          "#4a8a85",
+          "#6caca7",
+          "#a1cfca",
+          "#e5f1f0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Shadow Ink",
+        "canonical": "oklch(23.9% 0.019 190)",
+        "tonalRamp": [
+          "#080c0c",
+          "#1b2726",
+          "#344342",
+          "#526160",
+          "#718180",
+          "#91a3a1",
+          "#bac7c6",
+          "#ecefef"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Shell Cream",
+        "canonical": "oklch(93.7% 0.026 82)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#292318",
+          "#473f30",
+          "#655c4d",
+          "#857c6c",
+          "#a79d8c",
+          "#cac3b7",
+          "#f0eeeb"
+        ]
+      },
+      "cream-muted": {
+        "role": "neutral",
+        "displayName": "Muted Cream",
+        "canonical": "oklch(84.9% 0.031 82)",
+        "tonalRamp": [
+          "#0e0b06",
+          "#2a2315",
+          "#483e2d",
+          "#675c4a",
+          "#877c68",
+          "#a89d89",
+          "#ccc3b4",
+          "#f1eeea"
+        ]
+      },
+      "coral": {
+        "role": "primary",
+        "displayName": "Marlowby Coral",
+        "canonical": "oklch(66.7% 0.167 32)",
+        "tonalRamp": [
+          "#200000",
+          "#550000",
+          "#820000",
+          "#a72812",
+          "#cd4d37",
+          "#f47158",
+          "#ffa692",
+          "#ffe7e1"
+        ]
+      },
+      "coral-hover": {
+        "role": "primary",
+        "displayName": "Lit Coral",
+        "canonical": "oklch(71.0% 0.150 32)",
+        "tonalRamp": [
+          "#1e0000",
+          "#510000",
+          "#7c0500",
+          "#a1321e",
+          "#c6553f",
+          "#ed7760",
+          "#ffaa98",
+          "#ffe8e2"
+        ]
+      },
+      "coral-ink": {
+        "role": "primary",
+        "displayName": "Coral Ink",
+        "canonical": "oklch(54.2% 0.156 32)",
+        "tonalRamp": [
+          "#1f0000",
+          "#520000",
+          "#7e0000",
+          "#a32f1a",
+          "#c9523d",
+          "#ef755d",
+          "#ffa996",
+          "#ffe7e2"
+        ]
+      },
+      "kraft": {
+        "role": "tertiary",
+        "displayName": "Kraft",
+        "canonical": "oklch(66.7% 0.090 68)",
+        "tonalRamp": [
+          "#150700",
+          "#3a1d00",
+          "#603700",
+          "#825720",
+          "#a67843",
+          "#c39d74",
+          "#dcc5ac",
+          "#f4ede5"
+        ]
+      },
+      "kraft-side": {
+        "role": "tertiary",
+        "displayName": "Kraft Side",
+        "canonical": "oklch(58.0% 0.085 67)",
+        "tonalRamp": [
+          "#150800",
+          "#391d00",
+          "#5f3700",
+          "#815726",
+          "#a57848",
+          "#c29d77",
+          "#dbc5ae",
+          "#f4ede6"
+        ]
+      },
+      "kraft-dark": {
+        "role": "tertiary",
+        "displayName": "Kraft Dark",
+        "canonical": "oklch(48.9% 0.074 65)",
+        "tonalRamp": [
+          "#140800",
+          "#371e02",
+          "#5d390f",
+          "#7e5831",
+          "#a17952",
+          "#bf9e7e",
+          "#dac5b2",
+          "#f4ede7"
+        ]
+      },
+      "city-accent": {
+        "role": "primary",
+        "displayName": "City Accent",
+        "canonical": "oklch(66.7% 0.167 32)",
+        "tonalRamp": [
+          "#200000",
+          "#550000",
+          "#820000",
+          "#a72812",
+          "#cd4d37",
+          "#f47158",
+          "#ffa692",
+          "#ffe7e1"
+        ],
+        "note": "Per-city slot (--city-accent); New York resolves to coral. Drives the box tissue and the box-list progress bar."
+      },
+      "cream-hairline-faint": {
+        "role": "neutral",
+        "displayName": "Faint Cream Hairline",
+        "translucent": true
+      },
+      "cream-wash": {
+        "role": "neutral",
+        "displayName": "Cream Wash",
+        "translucent": true
+      },
+      "cream-hairline": {
+        "role": "neutral",
+        "displayName": "Cream Hairline",
+        "translucent": true
+      },
+      "cream-hairline-foot": {
+        "role": "neutral",
+        "displayName": "Cream Foot Hairline",
+        "translucent": true
+      },
+      "cream-wash-hover": {
+        "role": "neutral",
+        "displayName": "Cream Wash Hover",
+        "translucent": true
+      },
+      "cream-ring": {
+        "role": "neutral",
+        "displayName": "Cream Ring",
+        "translucent": true
+      },
+      "ink-fold": {
+        "role": "neutral",
+        "displayName": "Ink Fold",
+        "translucent": true
+      },
+      "ink-shadow": {
+        "role": "neutral",
+        "displayName": "Ink Shadow",
+        "translucent": true
+      },
+      "ink-ring": {
+        "role": "neutral",
+        "displayName": "Ink Ring",
+        "translucent": true
+      },
+      "ground-shadow": {
+        "role": "neutral",
+        "displayName": "Ground Shadow",
+        "translucent": true
+      },
+      "ground-deep-veil": {
+        "role": "neutral",
+        "displayName": "Night Teal Veil",
+        "translucent": true
+      },
+      "ground-deep-nav": {
+        "role": "neutral",
+        "displayName": "Night Teal Nav",
+        "translucent": true
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Capitalised statement titles, the wordmark (nav, box, footer), at wdth 125." },
-      "voice-display": { "displayName": "Voice Display", "purpose": "The hero line only; sign-off in italic 460, orange." },
-      "headline": { "displayName": "Headline", "purpose": "The box scene title, max 12ch." },
-      "statement": { "displayName": "Statement", "purpose": "The one-paragraph what-it-is passage, lit word by word on scroll, max 20ch." },
-      "title": { "displayName": "Title", "purpose": "Step names." },
-      "title-sm": { "displayName": "Title Small", "purpose": "Maker names in the box list." },
-      "body": { "displayName": "Body", "purpose": "Running text, 32ch to 40ch in practice." },
-      "voice": { "displayName": "Voice", "purpose": "Literata italic for descriptions, the footer line, greetings, step numerals." },
-      "label": { "displayName": "Label", "purpose": "Uppercase nav and footer links, the scroll cue." },
-      "button": { "displayName": "Button", "purpose": "Pill button text; inherits size from context." },
-      "data": { "displayName": "Data", "purpose": "DM Mono for coordinates, edition numbers, place-and-year lines, copyright only." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Charger 900 uppercase statement titles and the wordmark (nav, box, footer at (100vw - 2 gutter) / 4.75)."
+      },
+      "voice-display": {
+        "displayName": "Voice Display",
+        "purpose": "The hero line only; sign-off in italic 460, coral."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Charger 800, the box scene title, max 12ch."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "Trueno 700, the what-it-is passage, lit word by word on scroll, max 20ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Charger 700, step names."
+      },
+      "title-sm": {
+        "displayName": "Title Small",
+        "purpose": "Trueno 700, maker names in the box list."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Trueno 400 running text, 32ch to 40ch in practice."
+      },
+      "voice": {
+        "displayName": "Voice",
+        "purpose": "Literata italic for descriptions, the footer line, greetings, the closing serif half, step numerals."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Trueno 600 uppercase nav and footer links, the scroll cue."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Trueno 700 pill button text; inherits size from context."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "DM Mono for coordinates, edition numbers, place-and-year lines, copyright only."
+      }
     },
     "shadows": [
-      { "name": "box-ground", "value": "radial-gradient(closest-side, rgb(0 0 0 / 0.55), transparent)", "purpose": "Ground shadow under the kraft box on dark grounds; drawn as a background on an ellipse 1.5w by 0.3w." },
-      { "name": "box-ground-on-cream", "value": "radial-gradient(closest-side, rgb(20 16 12 / 0.28), transparent)", "purpose": "The same ground shadow on the cream closing section." },
-      { "name": "nav-hairline", "value": "0 1px 0 rgb(255 237 215 / 0.08)", "purpose": "Bottom edge of the nav once it turns solid." },
-      { "name": "ghost-ring", "value": "inset 0 0 0 1px rgb(255 237 215 / 0.45)", "purpose": "Ghost button outline; full cream on hover, ink at 40% on cream ground." },
-      { "name": "hero-veil", "value": "linear-gradient(to top right, #14100c 35%, rgb(20 16 12 / 0.62) 100%)", "purpose": "Veil over the hero video, heaviest behind the headline; fades from 10% to 80% opacity after the intro delay." }
+      {
+        "name": "box-ground",
+        "value": "radial-gradient(closest-side, rgb(0 0 0 / 0.55), transparent)",
+        "purpose": "Ground shadow under the kraft box on teal; drawn as a background on an ellipse 1.5w by 0.3w."
+      },
+      {
+        "name": "box-ground-on-cream",
+        "value": "radial-gradient(closest-side, rgb(20 34 33 / 0.28), transparent)",
+        "purpose": "The same ground shadow on the cream closing section."
+      },
+      {
+        "name": "nav-hairline",
+        "value": "0 1px 0 rgb(243 233 215 / 0.08)",
+        "purpose": "Bottom edge of the nav once it turns solid."
+      },
+      {
+        "name": "ghost-ring",
+        "value": "inset 0 0 0 1px rgb(243 233 215 / 0.45)",
+        "purpose": "Ghost button outline; full cream on hover, ink at 40% on cream ground."
+      },
+      {
+        "name": "hero-veil",
+        "value": "linear-gradient(to top right, #0a3634 35%, rgb(10 54 52 / 0.6) 100%)",
+        "purpose": "Night Teal veil over the hero video, heaviest behind the headline; fades from 10% to 80% opacity after the intro delay."
+      }
     ],
     "motion": [
-      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing curve for state changes, reveals and the hero intro." },
-      { "name": "state-change", "value": "0.25s", "purpose": "Button fill, ring, toggle background, arrow nudge (0.3s)." },
-      { "name": "nav-transition", "value": "0.35s to 0.4s", "purpose": "Nav link underline draw and nav solid transition." },
-      { "name": "reveal", "value": "0.8s to 1s", "purpose": "Steps rise (28px, 0.12s stagger), closing box rise (40px), hero words (0.9s, 0.07s stagger, 10px blur)." },
-      { "name": "intro-delay", "value": "2.4s", "purpose": "Hero hold before the line resolves; skipped on first wheel, touch or key." },
-      { "name": "box-spring", "value": "spring(stiffness 120, damping 30, mass 0.4)", "purpose": "Smooths scroll progress driving the box turn, lid, goods and list." },
-      { "name": "press", "value": "scale(0.97)", "purpose": "Button active state." }
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing curve for state changes, reveals and the hero intro."
+      },
+      {
+        "name": "state-change",
+        "value": "0.25s",
+        "purpose": "Button fill, ring, toggle background, arrow nudge (0.3s)."
+      },
+      {
+        "name": "nav-transition",
+        "value": "0.35s to 0.4s",
+        "purpose": "Nav link underline draw and nav solid transition."
+      },
+      {
+        "name": "reveal",
+        "value": "0.8s to 1s",
+        "purpose": "Steps rise (28px, 0.12s stagger), closing box rise (40px), hero words (0.9s, 0.07s stagger, 10px blur)."
+      },
+      {
+        "name": "intro-delay",
+        "value": "2.4s",
+        "purpose": "Hero hold before the line resolves; skipped on first wheel, touch or key."
+      },
+      {
+        "name": "box-spring",
+        "value": "spring(stiffness 120, damping 30, mass 0.4)",
+        "purpose": "Smooths scroll progress driving the box turn, lid, goods and list."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.97)",
+        "purpose": "Button active state."
+      }
     ],
     "breakpoints": [
-      { "name": "phone", "value": "640px" },
-      { "name": "steps-stack", "value": "760px" },
-      { "name": "compact", "value": "860px" }
+      {
+        "name": "phone",
+        "value": "640px"
+      },
+      {
+        "name": "steps-stack",
+        "value": "760px"
+      },
+      {
+        "name": "compact",
+        "value": "860px"
+      }
     ]
   },
   "components": [
@@ -55,17 +391,25 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Orange pill for Subscribe; ink text, trailing arrow nudges on hover.",
-      "html": "<a href=\"#\" class=\"ds-btn ds-btn-primary\">Subscribe <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M2 8h11M9 3.5 13.5 8 9 12.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"/></svg></a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.6em; min-height: 44px; padding: 0.7em 1.35em; border: 0; border-radius: 999px; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-size: 1.25rem; font-weight: 650; font-variation-settings: 'wdth' 112; letter-spacing: 0.01em; text-decoration: none; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn svg { width: 1em; height: 1em; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid #dc5000; outline-offset: 3px; } .ds-btn-primary { background: #dc5000; color: #14100c; } .ds-btn-primary:hover { background: #f05a05; }"
+      "description": "Coral pill for Subscribe on teal; ink text, trailing arrow nudges on hover.",
+      "html": "<div class=\"ds-teal\"><a href=\"#\" class=\"ds-btn ds-btn-primary\">Subscribe <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M2 8h11M9 3.5 13.5 8 9 12.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"/></svg></a></div>",
+      "css": ".ds-teal { background: #0e4a47; padding: 24px; } .ds-btn { display: inline-flex; align-items: center; gap: 0.6em; min-height: 44px; padding: 0.7em 1.35em; border: 0; border-radius: 999px; font-family: 'Trueno', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; text-decoration: none; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn svg { width: 1em; height: 1em; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid #e8664e; outline-offset: 3px; } .ds-btn-primary { background: #e8664e; color: #142221; } .ds-btn-primary:hover { background: #f07a63; }"
+    },
+    {
+      "name": "Primary Button on Cream",
+      "kind": "button",
+      "refersTo": "button-primary-on-cream",
+      "description": "Coral-ink pill with cream text on the cream closing ground; hover fills ink, focus ring ink.",
+      "html": "<div class=\"ds-cream\"><a href=\"#\" class=\"ds-btn ds-btn-primary-cream\">Subscribe <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M2 8h11M9 3.5 13.5 8 9 12.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"/></svg></a></div>",
+      "css": ".ds-cream { background: #f3e9d7; padding: 24px; } .ds-btn { display: inline-flex; align-items: center; gap: 0.6em; min-height: 44px; padding: 0.7em 1.35em; border: 0; border-radius: 999px; font-family: 'Trueno', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; text-decoration: none; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn svg { width: 1em; height: 1em; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(0.97); } .ds-btn-primary-cream { background: #b8432e; color: #f3e9d7; } .ds-btn-primary-cream:hover { background: #142221; } .ds-btn-primary-cream:focus-visible { outline: 2px solid #142221; outline-offset: 3px; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Secondary action on ink: transparent pill with a cream inset ring.",
-      "html": "<div class=\"ds-ink\"><a href=\"#\" class=\"ds-btn-ghost\">How it works</a></div>",
-      "css": ".ds-ink { background: #14100c; padding: 24px; } .ds-btn-ghost { display: inline-flex; align-items: center; min-height: 44px; padding: 0.7em 1.35em; border-radius: 999px; background: transparent; color: #ffedd7; box-shadow: inset 0 0 0 1px rgb(255 237 215 / 0.45); font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-weight: 650; font-variation-settings: 'wdth' 112; letter-spacing: 0.01em; text-decoration: none; transition: box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ghost:hover { box-shadow: inset 0 0 0 1px #ffedd7; } .ds-btn-ghost:active { transform: scale(0.97); } .ds-btn-ghost:focus-visible { outline: 2px solid #dc5000; outline-offset: 3px; }"
+      "description": "Secondary action on teal: transparent pill with a cream inset ring.",
+      "html": "<div class=\"ds-teal\"><a href=\"#\" class=\"ds-btn-ghost\">How it works</a></div>",
+      "css": ".ds-teal { background: #0e4a47; padding: 24px; } .ds-btn-ghost { display: inline-flex; align-items: center; min-height: 44px; padding: 0.7em 1.35em; border-radius: 999px; background: transparent; color: #f3e9d7; box-shadow: inset 0 0 0 1px rgb(243 233 215 / 0.45); font-family: 'Trueno', system-ui, sans-serif; font-weight: 700; letter-spacing: 0.01em; text-decoration: none; transition: box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ghost:hover { box-shadow: inset 0 0 0 1px #f3e9d7; } .ds-btn-ghost:active { transform: scale(0.97); } .ds-btn-ghost:focus-visible { outline: 2px solid #e8664e; outline-offset: 3px; }"
     },
     {
       "name": "Ghost Button on Cream",
@@ -73,87 +417,129 @@
       "refersTo": "button-ghost-on-cream",
       "description": "The ghost pill inverted for the cream closing ground.",
       "html": "<div class=\"ds-cream\"><a href=\"#\" class=\"ds-btn-ghost-cream\">How it works</a></div>",
-      "css": ".ds-cream { background: #ffedd7; padding: 24px; } .ds-btn-ghost-cream { display: inline-flex; align-items: center; min-height: 44px; padding: 0.7em 1.35em; border-radius: 999px; background: transparent; color: #14100c; box-shadow: inset 0 0 0 1px rgb(20 16 12 / 0.4); font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-weight: 650; font-variation-settings: 'wdth' 112; text-decoration: none; transition: box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ghost-cream:hover { box-shadow: inset 0 0 0 1px #14100c; } .ds-btn-ghost-cream:focus-visible { outline: 2px solid #dc5000; outline-offset: 3px; }"
+      "css": ".ds-cream { background: #f3e9d7; padding: 24px; } .ds-btn-ghost-cream { display: inline-flex; align-items: center; min-height: 44px; padding: 0.7em 1.35em; border-radius: 999px; background: transparent; color: #142221; box-shadow: inset 0 0 0 1px rgb(20 34 33 / 0.4); font-family: 'Trueno', system-ui, sans-serif; font-weight: 700; letter-spacing: 0.01em; text-decoration: none; transition: box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ghost-cream:hover { box-shadow: inset 0 0 0 1px #142221; } .ds-btn-ghost-cream:focus-visible { outline: 2px solid #142221; outline-offset: 3px; }"
     },
     {
       "name": "Navigation",
       "kind": "nav",
       "refersTo": "nav-solid",
-      "description": "Wordmark left, uppercase links with drawn underline, orange Subscribe right; solid state shown.",
+      "description": "Wordmark left, uppercase links with drawn underline, coral Subscribe right; solid state shown.",
       "html": "<header class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-mark\">Marlowby</a><ul class=\"ds-nav-links\"><li><a href=\"#\">The box</a></li><li><a href=\"#\">How it works</a></li></ul><a href=\"#\" class=\"ds-nav-cta\">Subscribe</a></header>",
-      "css": ".ds-nav { display: flex; align-items: center; gap: 2rem; padding: 1rem 24px; background: rgb(20 16 12 / 0.94); box-shadow: 0 1px 0 rgb(255 237 215 / 0.08); color: #ffedd7; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; } .ds-nav-mark { margin-right: auto; font-size: 1.3rem; font-weight: 800; font-variation-settings: 'wdth' 125; letter-spacing: -0.01em; text-transform: uppercase; text-decoration: none; color: inherit; } .ds-nav-links { display: flex; gap: 1.75rem; margin: 0; padding: 0; list-style: none; font-size: 0.875rem; font-weight: 550; font-variation-settings: 'wdth' 112; text-transform: uppercase; letter-spacing: 0.04em; } .ds-nav-links a { color: inherit; text-decoration: none; padding-block: 0.6rem; background: linear-gradient(currentColor, currentColor) left 100% / 0 1px no-repeat; transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-links a:hover { background-size: 100% 1px; } .ds-nav-links a:focus-visible, .ds-nav-cta:focus-visible { outline: 2px solid #dc5000; outline-offset: 3px; } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0.7em 1.35em; border-radius: 999px; background: #dc5000; color: #14100c; font-size: 0.875rem; font-weight: 650; font-variation-settings: 'wdth' 112; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-cta:hover { background: #f05a05; }"
+      "css": ".ds-nav { display: flex; align-items: center; gap: 2rem; padding: 1rem 24px; background: rgb(10 54 52 / 0.96); box-shadow: 0 1px 0 rgb(243 233 215 / 0.08); color: #f3e9d7; font-family: 'Trueno', system-ui, sans-serif; } .ds-nav-mark { margin-right: auto; font-family: 'Charger Pro Extended', 'Arial Black', system-ui, sans-serif; word-spacing: 0.24em; font-size: 1.3rem; font-weight: 900; letter-spacing: -0.01em; text-transform: uppercase; text-decoration: none; color: inherit; } .ds-nav-links { display: flex; gap: 1.75rem; margin: 0; padding: 0; list-style: none; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; } .ds-nav-links a { color: inherit; text-decoration: none; padding-block: 0.6rem; background: linear-gradient(currentColor, currentColor) left 100% / 0 1px no-repeat; transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-links a:hover { background-size: 100% 1px; } .ds-nav-links a:focus-visible, .ds-nav-cta:focus-visible { outline: 2px solid #e8664e; outline-offset: 3px; } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0.7em 1.35em; border-radius: 999px; background: #e8664e; color: #142221; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-cta:hover { background: #f07a63; }"
     },
     {
       "name": "Box List Row",
       "kind": "custom",
       "refersTo": "box-list-row",
-      "description": "A maker row in the sample box: name, mono place-and-year, italic serif description; the orange bar marks the lit row.",
+      "description": "A maker row in the sample box: name, mono place-and-year, italic serif description; the city-accent bar marks the lit row.",
       "html": "<ol class=\"ds-list\"><li class=\"ds-row\"><span class=\"ds-row-bar\"></span><h3 class=\"ds-row-maker\">Russ &amp; Daughters</h3><p class=\"ds-row-place\">Lower East Side · since 1914</p><p class=\"ds-row-thing\">Chocolate babka from the appetizing shop on Houston Street</p></li><li class=\"ds-row ds-row-dim\"><h3 class=\"ds-row-maker\">Levain Bakery</h3><p class=\"ds-row-place\">Upper West Side · since 1995</p><p class=\"ds-row-thing\">Chocolate chip walnut cookies, the six-ounce kind</p></li></ol>",
-      "css": ".ds-list { margin: 0; padding: 24px; list-style: none; background: #14100c; color: #ffedd7; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; } .ds-row { position: relative; display: grid; grid-template-columns: 1fr auto; column-gap: 1rem; padding: 0.85rem 0 0.9rem; border-top: 1px solid rgb(255 237 215 / 0.14); } .ds-row-dim { opacity: 0.22; } .ds-row-bar { position: absolute; left: 0; top: -1px; width: 100%; height: 1px; background: #dc5000; } .ds-row-maker { margin: 0; font-size: 1.375rem; font-weight: 650; font-variation-settings: 'wdth' 110; letter-spacing: -0.015em; line-height: 1.2; } .ds-row-place { margin: 0; align-self: center; text-align: right; color: #cdbba6; font-family: 'DM Mono', ui-monospace, monospace; font-size: 0.875rem; letter-spacing: 0.02em; } .ds-row-thing { grid-column: 1 / -1; margin: 0.15rem 0 0; font-family: 'Literata Variable', 'Literata', Georgia, serif; font-style: italic; color: #cdbba6; }"
+      "css": ".ds-list { margin: 0; padding: 24px; list-style: none; background: #0e4a47; color: #f3e9d7; font-family: 'Trueno', system-ui, sans-serif; } .ds-row { position: relative; display: grid; grid-template-columns: 1fr auto; column-gap: 1rem; padding: 0.85rem 0 0.9rem; border-top: 1px solid rgb(243 233 215 / 0.14); } .ds-row-dim { opacity: 0.22; } .ds-row-bar { position: absolute; left: 0; top: -1px; width: 100%; height: 1px; background: var(--city-accent, #e8664e); } .ds-row-maker { margin: 0; font-size: 1.375rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; } .ds-row-place { margin: 0; align-self: center; text-align: right; color: #d8ccb7; font-family: 'DM Mono', ui-monospace, monospace; font-size: 0.875rem; letter-spacing: 0.02em; } .ds-row-thing { grid-column: 1 / -1; margin: 0.15rem 0 0; font-family: 'Literata Variable', 'Literata', Georgia, serif; font-style: italic; color: #d8ccb7; }"
     },
     {
       "name": "Step",
       "kind": "custom",
       "refersTo": "steps-section",
-      "description": "One of three steps on olive: cream rule with orange node, italic serif numeral, title, body.",
+      "description": "One of three steps on the coral field: ink rule with cream node, italic serif numeral, Charger title, body.",
       "html": "<div class=\"ds-steps\"><div class=\"ds-step\"><span class=\"ds-step-num\">1</span><h3 class=\"ds-step-name\">Pick a plan</h3><p class=\"ds-step-body\">Choose the plan that fits how you like to explore.</p></div></div>",
-      "css": ".ds-steps { background: #445231; color: #ffedd7; padding: 40px 24px 32px; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; } .ds-step { position: relative; max-width: 22rem; padding-top: 1.5rem; border-top: 2px solid #ffedd7; } .ds-step::before { content: ''; position: absolute; left: 0; top: -7px; width: 12px; height: 12px; border-radius: 50%; background: #dc5000; } .ds-step-num { display: block; font-family: 'Literata Variable', 'Literata', Georgia, serif; font-style: italic; font-size: 3rem; line-height: 1; opacity: 0.55; } .ds-step-name { margin: 1.25rem 0 0; font-size: 2rem; font-weight: 700; font-variation-settings: 'wdth' 112; letter-spacing: -0.02em; line-height: 1.1; } .ds-step-body { margin: 0.6rem 0 0; max-width: 32ch; line-height: 1.55; }"
+      "css": ".ds-steps { background: #e8664e; color: #142221; padding: 40px 24px 32px; font-family: 'Trueno', system-ui, sans-serif; } .ds-step { position: relative; max-width: 22rem; padding-top: 1.5rem; border-top: 2px solid #142221; } .ds-step::before { content: ''; position: absolute; left: 0; top: -7px; width: 12px; height: 12px; border-radius: 50%; background: #f3e9d7; } .ds-step-num { display: block; font-family: 'Literata Variable', 'Literata', Georgia, serif; font-style: italic; font-size: 3rem; line-height: 1; opacity: 0.6; } .ds-step-name { margin: 1.25rem 0 0; font-family: 'Charger Pro Extended', 'Arial Black', system-ui, sans-serif; word-spacing: 0.24em; font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; } .ds-step-body { margin: 0.6rem 0 0; max-width: 32ch; line-height: 1.55; }"
     },
     {
       "name": "Kraft Box",
       "kind": "custom",
       "refersTo": "box-label",
-      "description": "The signature object: a CSS-3D kraft box with cream shipping label, shown closed as No. 002.",
+      "description": "The signature object: a CSS-3D kraft box with cream shipping label, shown closed as No. 002 on the cream closing ground.",
       "html": "<div class=\"ds-box-stage\"><div class=\"ds-box\"><div class=\"ds-face ds-front\"><div class=\"ds-label\"><span class=\"ds-label-mark\">Marlowby</span><span class=\"ds-mono\">No. 002</span><span class=\"ds-label-city\">Next city</span><span class=\"ds-mono\">Ships next month</span></div></div><div class=\"ds-face ds-back\"></div><div class=\"ds-face ds-side ds-right\"></div><div class=\"ds-face ds-side ds-left\"></div><div class=\"ds-lid\"><span>Marlowby</span></div></div><div class=\"ds-box-shadow\"></div></div>",
-      "css": ".ds-box-stage { --w: 260px; --h: calc(var(--w) * 0.56); --d: calc(var(--w) * 0.74); position: relative; display: grid; place-items: center; height: calc(var(--w) * 1.3); perspective: 1600px; perspective-origin: 50% 20%; background: #ffedd7; isolation: isolate; } .ds-box { position: relative; width: var(--w); height: var(--h); transform-style: preserve-3d; transform: rotateX(-20deg) rotateY(24deg); } .ds-face { position: absolute; left: 0; top: 0; width: var(--w); height: var(--h); background: #b98a55; } .ds-front { transform: translateZ(calc(var(--d) / 2)); display: grid; place-items: center; } .ds-back { transform: rotateY(180deg) translateZ(calc(var(--d) / 2)); background: #9c7040; } .ds-side { width: var(--d); left: calc((var(--w) - var(--d)) / 2); background: #9c7040; } .ds-right { transform: rotateY(90deg) translateZ(calc(var(--w) / 2)); } .ds-left { transform: rotateY(-90deg) translateZ(calc(var(--w) / 2)); } .ds-lid { position: absolute; left: 0; top: calc(var(--d) * -1); width: var(--w); height: var(--d); transform-origin: 50% 100%; transform: translateZ(calc(var(--d) / -2)) rotateX(-90deg) rotateX(180deg); display: grid; place-content: center; background: #b98a55; color: #14100c; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-weight: 800; font-variation-settings: 'wdth' 125; text-transform: uppercase; font-size: calc(var(--w) * 0.08); letter-spacing: -0.01em; } .ds-label { display: grid; gap: 0.15em; width: 62%; padding: 7% 8%; background: #ffedd7; color: #14100c; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-size: calc(var(--w) * 0.032); line-height: 1.25; } .ds-label-mark { font-weight: 800; font-variation-settings: 'wdth' 125; text-transform: uppercase; font-size: 1.45em; letter-spacing: -0.01em; border-bottom: 2px solid #14100c; padding-bottom: 0.25em; margin-bottom: 0.3em; } .ds-label-city { font-family: 'Literata Variable', 'Literata', Georgia, serif; font-style: italic; font-size: 1.7em; color: #dc5000; line-height: 1.1; margin-top: 0.2em; } .ds-mono { font-family: 'DM Mono', ui-monospace, monospace; letter-spacing: 0.02em; } .ds-box-shadow { position: absolute; left: 50%; top: 72%; width: calc(var(--w) * 1.5); height: calc(var(--w) * 0.3); translate: -50% 0; background: radial-gradient(closest-side, rgb(20 16 12 / 0.28), transparent); z-index: -1; }"
+      "css": ".ds-box-stage { --w: 260px; --h: calc(var(--w) * 0.56); --d: calc(var(--w) * 0.74); position: relative; display: grid; place-items: center; height: calc(var(--w) * 1.3); perspective: 1600px; perspective-origin: 50% 20%; background: #f3e9d7; isolation: isolate; } .ds-box { position: relative; width: var(--w); height: var(--h); transform-style: preserve-3d; transform: rotateX(-20deg) rotateY(24deg); } .ds-face { position: absolute; left: 0; top: 0; width: var(--w); height: var(--h); background: #b98a55; } .ds-front { transform: translateZ(calc(var(--d) / 2)); display: grid; place-items: center; } .ds-back { transform: rotateY(180deg) translateZ(calc(var(--d) / 2)); background: #9c7040; } .ds-side { width: var(--d); left: calc((var(--w) - var(--d)) / 2); background: #9c7040; } .ds-right { transform: rotateY(90deg) translateZ(calc(var(--w) / 2)); } .ds-left { transform: rotateY(-90deg) translateZ(calc(var(--w) / 2)); } .ds-lid { position: absolute; left: 0; top: calc(var(--d) * -1); width: var(--w); height: var(--d); transform-origin: 50% 100%; transform: translateZ(calc(var(--d) / -2)) rotateX(-90deg) rotateX(180deg); display: grid; place-content: center; background: #b98a55; color: #142221; font-family: 'Charger Pro Extended', 'Arial Black', system-ui, sans-serif; word-spacing: 0.24em; font-weight: 900; text-transform: uppercase; font-size: calc(var(--w) * 0.08); letter-spacing: -0.01em; } .ds-label { display: grid; gap: 0.15em; width: 62%; padding: 7% 8%; background: #f3e9d7; color: #142221; font-family: 'Trueno', system-ui, sans-serif; font-size: calc(var(--w) * 0.032); line-height: 1.25; } .ds-label-mark { font-family: 'Charger Pro Extended', 'Arial Black', system-ui, sans-serif; word-spacing: 0.24em; font-weight: 900; text-transform: uppercase; font-size: 1.45em; letter-spacing: -0.01em; border-bottom: 2px solid #142221; padding-bottom: 0.25em; margin-bottom: 0.3em; } .ds-label-city { font-family: 'Literata Variable', 'Literata', Georgia, serif; font-style: italic; font-size: 1.7em; color: #b8432e; line-height: 1.1; margin-top: 0.2em; } .ds-mono { font-family: 'DM Mono', ui-monospace, monospace; letter-spacing: 0.02em; } .ds-box-shadow { position: absolute; left: 50%; top: 72%; width: calc(var(--w) * 1.5); height: calc(var(--w) * 0.3); translate: -50% 0; background: radial-gradient(closest-side, rgb(20 34 33 / 0.28), transparent); z-index: -1; }"
     },
     {
       "name": "Video Toggle",
       "kind": "button",
       "refersTo": "video-toggle",
       "description": "44px circular pause/play control for the hero footage.",
-      "html": "<div class=\"ds-ink-pad\"><button type=\"button\" class=\"ds-toggle\" aria-label=\"Pause background video\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><rect x=\"3.5\" y=\"2.5\" width=\"3\" height=\"11\" fill=\"currentColor\"/><rect x=\"9.5\" y=\"2.5\" width=\"3\" height=\"11\" fill=\"currentColor\"/></svg></button></div>",
-      "css": ".ds-ink-pad { background: #14100c; padding: 24px; } .ds-toggle { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgb(255 237 215 / 0.12); color: #ffedd7; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-toggle:hover { background: rgb(255 237 215 / 0.22); } .ds-toggle:focus-visible { outline: 2px solid #dc5000; outline-offset: 3px; } .ds-toggle svg { width: 14px; height: 14px; }"
+      "html": "<div class=\"ds-teal\"><button type=\"button\" class=\"ds-toggle\" aria-label=\"Pause background video\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><rect x=\"3.5\" y=\"2.5\" width=\"3\" height=\"11\" fill=\"currentColor\"/><rect x=\"9.5\" y=\"2.5\" width=\"3\" height=\"11\" fill=\"currentColor\"/></svg></button></div>",
+      "css": ".ds-teal { background: #0e4a47; padding: 24px; } .ds-toggle { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgb(243 233 215 / 0.12); color: #f3e9d7; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-toggle:hover { background: rgb(243 233 215 / 0.22); } .ds-toggle:focus-visible { outline: 2px solid #e8664e; outline-offset: 3px; } .ds-toggle svg { width: 14px; height: 14px; }"
     }
   ],
   "narrative": {
     "northStar": "The City in a Box, Under Stage Light",
-    "overview": "Marlowby is staged like a film with one star: the month's kraft box. The ground is a warm brown-black, almost the color of a darkened theater, and everything else is lit against it. Night footage of the city opens the page, a serif line arrives word by word over it, and from there the box itself carries the story: it turns, its lid swings open as you scroll, the city's goods rise through orange tissue, and at the close a second box sits shut, labeled for the next city. The structure is the category-standard subscription page (hero, what it is, what's inside, three steps, subscribe), executed with cinematic scroll craft rather than stock photography and icon cards.\n\nThe density is low and the scale is high. Sections are full-bleed bands, separated by a change of ground (ink, olive, cream) rather than by cards, borders or dividers. Type does the heavy lifting: an expanded grotesque that widens as it grows louder, a literary serif for anything said in a human voice, and a monospace that appears only when the content is genuinely data, such as coordinates, edition numbers and neighborhood-plus-founding-year lines. Color is few and warm, with burnt orange held back as the signal.\n\nMotion is continuous with scroll and eased on one long out-curve. Every animated piece has a reduced-motion state that lands on the finished frame: the box rests open at a fixed angle, the goods sit fully risen, the list rows are fully lit, the video is paused.",
+    "overview": "Marlowby is staged like a film with one star: the month's kraft box. The ground is a deep teal, dark enough to read as a stage at night, and everything else is lit against it. Night footage of the city opens the page, a serif line arrives word by word over it, and from there the box itself carries the story: it turns, its lid swings open as you scroll, the city's goods rise through tissue in the city's accent color, and at the close a second box sits shut, labeled for the next city. The structure is the category-standard subscription page (hero, what it is, what's inside, three steps, subscribe), executed with cinematic scroll craft rather than stock photography and icon cards.\n\nThe density is low and the scale is high. Sections are full-bleed bands, separated by a change of ground (teal, coral, cream) rather than by cards, borders or dividers. Type does the heavy lifting: a very heavy extended display face for titles and the wordmark, a clean geometric sans for reading and controls, a literary serif for anything said in a human voice, and a monospace that appears only when the content is genuinely data, such as coordinates, edition numbers and neighborhood-plus-founding-year lines. The palette is the team's own: deep teal, coral and cream, chosen for accessible contrast and a kraft-paper box feel.\n\nMotion is continuous with scroll and eased on one long out-curve. Every animated piece has a reduced-motion state that lands on the finished frame: the box rests open at a fixed angle, the goods sit fully risen, the list rows are fully lit, the statement is fully lit, the video is paused.",
     "keyCharacteristics": [
-      "One dark, warm stage (ink) with olive and cream as the only alternate section grounds.",
-      "Burnt orange as a rare signal: actions, the city's name, and live state.",
-      "Archivo on its width axis, from 100 at body size to 125 for the wordmark and capitalised display.",
+      "One deep teal stage, with coral and cream as the only alternate section grounds.",
+      "Coral as the action and city color; it steps down to coral-ink wherever it must carry text or a button on cream.",
+      "Charger Pro Extended, set very heavy, for titles and the wordmark, always with widened word spacing.",
+      "Trueno for body, labels, buttons, maker names and the statement.",
       "Literata (optical size 72 at display) for voice lines, often italic.",
       "DM Mono only for real data.",
       "A CSS-3D kraft box built from flat faces is the single recurring object and the page's signature.",
       "Flat surfaces, square corners, pill buttons; the only cast shadow is the box's ground shadow."
     ],
     "rules": [
-      { "name": "The Ink-On-Orange Rule", "body": "Orange fills always carry ink text, never cream. Ink on orange clears 4.5:1; cream on orange does not.", "section": "colors" },
-      { "name": "The Signal Orange Rule", "body": "Orange means \"act here\", \"this is the city\", or \"this is live\". It is never a section ground and never a decorative wash. Orange text on cream is used only at display size, where it clears the large-text threshold.", "section": "colors" },
-      { "name": "The Three Grounds Rule", "body": "Sections are ink, olive or cream. A change of ground is the section divider; no cards, panels or boxed containers sit on top of a ground.", "section": "colors" },
-      { "name": "The Three Voices Rule", "body": "Archivo speaks for the brand and the structure, Literata speaks for people and feeling, DM Mono speaks only for facts that are data. If a line is not a coordinate, a number, a date or a place-and-year, it is not mono.", "section": "typography" },
-      { "name": "The Width-Is-Volume Rule", "body": "Emphasis is carried on the `wdth` axis as much as on weight: 100 for body, 108 to 115 for headings, 112 for labels and buttons, 125 for the wordmark and capitalised display. Don't fake width with letter-spacing.", "section": "typography" },
-      { "name": "The Ground-Shadow-Only Rule", "body": "The only cast shadow belongs to the box, because it is the only object. Surfaces stay flat; separation comes from ground color and hairlines.", "section": "elevation" },
-      { "name": "The One Object Rule", "body": "The kraft box is the system's only 3D object and its only illustration. New surfaces that need to show the product reuse this component with new label data; they don't introduce photographs of boxes, a second 3D object or illustrated substitutes.", "section": "components" }
+      {
+        "name": "The Coral Contrast Rule",
+        "body": "Coral fills carry ink text (5.0:1), never cream. On cream, coral steps down to coral-ink for text and buttons (4.5:1), and a coral-ink button carries cream text. Coral as text on teal is display size only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signal Coral Rule",
+        "body": "Coral means \"act here\", \"this is the city\", or \"this is live\". Its one use as a ground is the \"How it works\" band, and nothing on that band is coral: its type and rules are ink, its nodes cream.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Grounds Rule",
+        "body": "Sections are teal, coral or cream. A change of ground is the section divider; no cards, panels or boxed containers sit on top of a ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-On-Light Focus Rule",
+        "body": "The focus ring is 2px coral at 3px offset on teal; on the cream ground it switches to ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Four Voices Rule",
+        "body": "Charger speaks for the brand's loudest lines (titles and the wordmark), Trueno for reading and controls, Literata for people and feeling, DM Mono only for facts that are data. If a line is not a coordinate, a number, a date or a place-and-year, it is not mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Heavy Charger Rule",
+        "body": "Charger runs light, so each CSS weight maps one cut heavier: 700 is the Extrabold Extended file, 800 Black Extended, 900 Ultrablack Extended. Charger is only set at 700, 800 or 900; there is no lighter file.",
+        "section": "typography"
+      },
+      {
+        "name": "The Open Word Rule",
+        "body": "Every Charger selector carries `word-spacing: var(--display-word-space)` (0.24em), because Charger's own space glyph is only 0.11em and multi-word titles run together without it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ground-Shadow-Only Rule",
+        "body": "The only cast shadow belongs to the box, because it is the only object. Surfaces stay flat; separation comes from ground color and hairlines.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Object Rule",
+        "body": "The kraft box is the system's only 3D object and its only illustration. New surfaces that need to show the product reuse this component with new label data; they don't introduce photographs of boxes, a second 3D object or illustrated substitutes.",
+        "section": "components"
+      }
     ],
     "dos": [
-      "**Do** set pages on Stage Ink and change ground (ink, olive, cream) to mark a new section.",
-      "**Do** put ink text on every orange fill, and keep orange for actions, the city's name and live state (focus, selection, progress).",
-      "**Do** use Archivo's `wdth` axis for hierarchy: 125 for the wordmark and capitalised display, 108 to 115 for headings, 112 for labels and buttons, 100 for body.",
+      "**Do** set pages on Deep Teal and change ground (teal, coral, cream) to mark a new section.",
+      "**Do** put ink text on every coral fill, and switch to coral-ink with cream text for buttons and coral text on cream.",
+      "**Do** keep coral for actions, the city and live state (focus, selection, caret); route anything that should change per city through `city-accent`.",
+      "**Do** set Charger only at 700, 800 or 900, and give every Charger line `word-spacing: var(--display-word-space)`.",
+      "**Do** set body, labels, buttons and the statement in Trueno.",
       "**Do** write voice lines (greetings, descriptions, the sign-off) in Literata, italic when it is a person or a city speaking.",
       "**Do** reserve DM Mono for coordinates, edition numbers, dates and place-and-year lines.",
       "**Do** ease every transition on `cubic-bezier(0.16, 1, 0.3, 1)`; 0.25s for state changes, 0.8s to 1s for reveals.",
       "**Do** give every scroll or intro animation a reduced-motion end state that shows the finished frame.",
-      "**Do** hold all interactive targets to 44px and keep the 2px orange focus outline at 3px offset."
+      "**Do** hold all interactive targets to 44px and keep the 2px focus outline at 3px offset (coral on teal, ink on cream)."
     ],
     "donts": [
-      "**Don't** put cream text on orange, or use orange as a section ground or decorative fill.",
+      "**Don't** put cream text on coral, coral text on cream at body size, or coral text on teal below display size.",
+      "**Don't** place a coral element on the coral field.",
       "**Don't** add cards, panels, drop shadows or rounded containers on the grounds; separation is ground color and hairlines.",
       "**Don't** round rectangles; rounding is only the pill button and the circle.",
       "**Don't** set prose, headings or labels in DM Mono.",
       "**Don't** replace the kraft box with product photography or introduce a second 3D object.",
-      "**Don't** fake width or emphasis with letter-spacing where the `wdth` axis can carry it."
+      "**Don't** set Charger without the display word spacing, or reach for a variable-width axis; width comes from the Extended cut."
     ]
   }
 }

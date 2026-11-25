@@ -6,25 +6,24 @@
 
 html {
   color-scheme: dark;
-  scrollbar-color: var(--kraft-side) var(--ink);
+  scrollbar-color: var(--kraft-side) var(--ground);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  background: var(--ink);
+  background: var(--ground);
   color: var(--cream);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--step-0);
   line-height: 1.55;
-  font-variation-settings: 'wdth' 100;
-  caret-color: var(--orange);
+  caret-color: var(--coral);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--orange);
+  background: var(--coral);
   color: var(--ink);
 }
 
@@ -59,7 +58,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--orange);
+  outline: 2px solid var(--coral);
   outline-offset: 3px;
 }
 
@@ -104,8 +103,7 @@ main:focus {
   border: 0;
   border-radius: 999px;
   font: inherit;
-  font-weight: 650;
-  font-variation-settings: 'wdth' 112;
+  font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: none;
   cursor: pointer;
@@ -120,18 +118,18 @@ main:focus {
 }
 
 .btn--primary {
-  background: var(--orange);
+  background: var(--coral);
   color: var(--ink);
 }
 
 .btn--primary:hover {
-  background: var(--orange-hover);
+  background: var(--coral-hover);
 }
 
 .btn--ghost {
   background: transparent;
   color: var(--cream);
-  box-shadow: inset 0 0 0 1px rgb(255 237 215 / 0.45);
+  box-shadow: inset 0 0 0 1px rgb(243 233 215 / 0.45);
 }
 
 .btn--ghost:hover {
