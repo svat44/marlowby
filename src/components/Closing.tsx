@@ -12,8 +12,8 @@ export default function Closing() {
   return (
     <section className="closing" aria-labelledby="closing-title">
       <h2 id="closing-title" className="closing__title">
-        A new city
-        <span className="closing__serif"> every month.</span>
+        Explore Your City,
+        <span className="closing__serif"> One Box at a Time.</span>
       </h2>
       <motion.div
         className="box-scene__object closing__box"

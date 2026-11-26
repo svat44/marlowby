@@ -32,6 +32,7 @@
   font-style: italic;
   text-transform: none;
   letter-spacing: -0.02em;
+  word-spacing: normal;
   color: var(--coral-ink);
 }
 

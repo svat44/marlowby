@@ -50,6 +50,7 @@ Each box is one specific U.S. city, sourced from that city's own small businesse
 ## Brand Commitments
 
 - Name: Marlowby.
+- Official BPA slogan: "Marlowby: Explore Your City, One Box at a Time." Use it verbatim, with this capitalization, wherever the product is introduced (page title, metadata, the homepage close, the footer).
 - Personality: warm, curious, local.
 - Palette committed by the team: deep teal, coral and cream, chosen for accessible contrast and a kraft-paper box feel. (Briefly swapped for oryzo.ai's colors on 2026-11-25; the user restored the team palette the same day.)
 - oryzo.ai is inspiration only for motion, the 3D object treatment and craft level (cinematic scroll storytelling around one central object, very large display type, a serif for the voice lines). It is not a source of colors.

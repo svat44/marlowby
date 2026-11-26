@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__row">
-        <p className="footer__line">A monthly box from a different U.S. city.</p>
+        <p className="footer__line">Marlowby: Explore Your City, One Box at a Time</p>
         <nav aria-label="Footer">
           <ul className="footer__links">
             <li><a href="/#box">The box</a></li>

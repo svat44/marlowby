@@ -6,7 +6,7 @@ export default function Upcoming({ title, notFound = false }: { title: string; n
     document.title = `${title} · Marlowby`
     window.scrollTo(0, 0)
     return () => {
-      document.title = 'Marlowby · A whole city at home'
+      document.title = 'Marlowby: Explore Your City, One Box at a Time'
     }
   }, [title])
 

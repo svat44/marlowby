@@ -250,9 +250,9 @@
         "displayName": "Ground Shadow",
         "translucent": true
       },
-      "ground-deep-veil": {
+      "hero-veil": {
         "role": "neutral",
-        "displayName": "Night Teal Veil",
+        "displayName": "Black Veil",
         "translucent": true
       },
       "ground-deep-nav": {
@@ -330,8 +330,8 @@
       },
       {
         "name": "hero-veil",
-        "value": "linear-gradient(to top right, #0a3634 35%, rgb(10 54 52 / 0.6) 100%)",
-        "purpose": "Night Teal veil over the hero video, heaviest behind the headline; fades from 10% to 80% opacity after the intro delay."
+        "value": "linear-gradient(to top right, #000 35%, rgb(0 0 0 / 0.6) 100%)",
+        "purpose": "Black veil over the hero video, heaviest behind the headline; fades from 10% to 80% opacity after the intro delay."
       }
     ],
     "motion": [

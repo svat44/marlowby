@@ -25,7 +25,7 @@
 .hero__veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top right, var(--ground-deep) 35%, rgb(10 54 52 / 0.6) 100%);
+  background: linear-gradient(to top right, #000 35%, rgb(0 0 0 / 0.6) 100%);
 }
 
 .hero__copy {

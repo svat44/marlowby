@@ -25,7 +25,7 @@ colors:
   ink-shadow: "rgb(20 34 33 / 0.28)"
   ink-ring: "rgb(20 34 33 / 0.4)"
   ground-shadow: "rgb(0 0 0 / 0.55)"
-  ground-deep-veil: "rgb(10 54 52 / 0.6)"
+  hero-veil: "rgb(0 0 0 / 0.6)"
   ground-deep-nav: "rgb(10 54 52 / 0.96)"
 typography:
   display:
@@ -186,7 +186,7 @@ A cool-dark, warm-light palette: deep teal grounds, coral for action and the cit
 
 ### Neutral
 - **Deep Teal** (`ground`): the page ground, the hero and statement, the box scene, the footer; also one of the goods inside the box.
-- **Night Teal** (`ground-deep`): the hero veil over the video and, at 96% (`ground-deep-nav`), the nav once it turns solid. The veil runs from full Night Teal at the bottom left to 60% (`ground-deep-veil`) at the top right.
+- **Night Teal** (`ground-deep`): at 96% (`ground-deep-nav`), the nav once it turns solid. The hero veil over the city footage is black, not teal, running from full black at the bottom left to 60% (`hero-veil`) at the top right.
 - **Raised Teal** (`ground-raised`): one step above the stage; used for a dark good inside the box, outlined in cream, so it separates from the stage behind it.
 - **Shadow Ink** (`ink`): text on every coral and cream surface, the 2px rules on the coral field and the box label, and the hover fill of the closing Subscribe button.
 - **Shell Cream** (`cream`): primary type on teal; the ground of the closing section; the box's shipping label; the step nodes on the coral field.
@@ -227,7 +227,7 @@ A cool-dark, warm-light palette: deep teal grounds, coral for action and the cit
 The scale is a fluid six-step ramp (`--step--1` through `--step-4`) clamped between phone and wide desktop, roughly 1.25 at the small end opening to about 1.6 at display.
 
 ### Hierarchy
-- **Display** (Charger 900, step 4, 0.95 to 0.98, -0.035em, uppercase): section titles that act as statements, "How it works" and "A new city every month.", and the placeholder page titles; the nav wordmark at 1.3rem; the box's lid and label mark; the footer wordmark scaled to span the content width (`calc((100vw - 2 * gutter) / 4.75)`, line-height 0.8, -0.04em).
+- **Display** (Charger 900, step 4, 0.95 to 0.98, -0.035em, uppercase): section titles that act as statements, "How it works" and the slogan close "Explore Your City, / One Box at a Time.", and the placeholder page titles; the nav wordmark at 1.3rem; the box's lid and label mark; the footer wordmark scaled to span the content width (`calc((100vw - 2 * gutter) / 4.75)`, line-height 0.8, -0.04em).
 - **Voice Display** (Literata 380, opsz 72, step 4, 1.04, -0.025em): the hero line only. Its sign-off is italic 460 in coral.
 - **Headline** (Charger 800, step 3, 1.02, -0.03em, max 12ch, sentence case): the box scene's title.
 - **Statement** (Trueno 700, step 3, 1.12, -0.025em, max 20ch): the one-paragraph "what Marlowby is" passage, lit word by word on scroll from 16% to full.
@@ -258,7 +258,7 @@ Responsive behavior: at 860px and below the box scene stops pinning and stacks (
 
 ## Elevation & Depth
 
-The system is flat. Depth comes from real 3D in the box (CSS perspective 1600px, origin 50% 20%, `preserve-3d` faces) and from tonal shifts between kraft faces, not from shadows on surfaces. The box sits on a soft radial ground shadow; nothing else casts one. Light on dark is handled with alpha hairlines and the hero's diagonal Night Teal veil, which is heaviest behind the headline.
+The system is flat. Depth comes from real 3D in the box (CSS perspective 1600px, origin 50% 20%, `preserve-3d` faces) and from tonal shifts between kraft faces, not from shadows on surfaces. The box sits on a soft radial ground shadow; nothing else casts one. Light on dark is handled with alpha hairlines and the hero's diagonal black veil, which is heaviest behind the headline.
 
 ### Shadow Vocabulary
 - **Box ground shadow** (`radial-gradient(closest-side, ground-shadow, transparent)`, 1.5 box-widths by 0.3, placed at 72% height): under the box on teal. On cream it lightens to `ink-shadow`.
