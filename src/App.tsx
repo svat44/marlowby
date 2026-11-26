@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './routes/Home'
 import Upcoming from './routes/Upcoming'
+import Journey from './routes/Journey'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <main id="main" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/journey" element={<Journey />} />
           <Route path="/subscribe" element={<Upcoming title="Subscribe" />} />
           <Route path="*" element={<Upcoming title="Page not found" notFound />} />
         </Routes>
