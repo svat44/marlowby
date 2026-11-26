@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useRef } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { ContactShadows, useGLTF } from '@react-three/drei'
-import { MathUtils, Mesh, MeshStandardMaterial, type Group, type Object3D } from 'three'
+import { MathUtils, Mesh, MeshStandardMaterial, Vector3, type Group, type Object3D } from 'three'
 import type { MotionValue } from 'motion/react'
 import { makeLabel, makeLidPrint, type City } from './labelTexture'
 
 const MODEL = '/models/marlowby-box.glb'
 const GOODS = ['Good_Babka', 'Good_Cookies', 'Good_Zaatar', 'Good_Coffee', 'Good_Map'] as const
-const RISE = [0.085, 0.1, 0.075, 0.095, 0.07] // metres each good lifts out of the tissue
+const RISE = [0.13, 0.155, 0.12, 0.145, 0.11] // metres each good lifts out of the tissue
 
 /** Linear ramp of p across [a, b], clamped and eased (ease-out). */
 function ramp(p: number, a: number, b: number) {
@@ -21,6 +21,8 @@ export const BEATS = {
   lidOpen: [0.44, 0.56],
   goods: [0.5, 0.68],
   close: [0.72, 0.82],
+  cameraUp: [0.42, 0.56],
+  cameraBack: [0.72, 0.9],
 } as const
 
 function Box({ progress, city }: { progress: MotionValue<number>; city: City }) {
@@ -48,22 +50,15 @@ function Box({ progress, city }: { progress: MotionValue<number>; city: City }) 
     }
   }, [city, nodes, scene])
 
-  useFrame((state) => {
+  useFrame(() => {
     const p = progress.get()
     const r = root.current
     if (!r) return
     const appear = ramp(p, BEATS.boxIn[0], BEATS.boxIn[1])
     const open = ramp(p, BEATS.lidOpen[0], BEATS.lidOpen[1]) * (1 - ramp(p, BEATS.close[0], BEATS.close[1]))
 
-    // Turn: three-quarter view, a swing during the city beat, front-on for the label at the end
-    const swing = MathUtils.lerp(-0.75, 0.55, ramp(p, 0.16, 0.42))
-    const settle = ramp(p, 0.72, 0.9)
-    r.rotation.y = MathUtils.lerp(swing - 0.25 * ramp(p, 0.44, 0.66), -0.08, settle)
-    r.rotation.x = MathUtils.lerp(0.42, 0.18, settle)
+    // The box stays put, facing forward; CameraRig does the moving
     r.scale.setScalar(MathUtils.lerp(0.62, 1, appear))
-    // Drop a little while open so the heading above has room for the raised lid
-    const dip = 0.05 * ramp(p, 0.42, 0.5) * (1 - ramp(p, 0.72, 0.8))
-    r.position.y = -0.04 - dip + Math.sin(state.clock.elapsedTime * 0.9) * 0.004 * appear
 
     nodes.lid.rotation.x = -1.95 * open
     nodes.goods.forEach((g, i) => {
@@ -75,22 +70,37 @@ function Box({ progress, city }: { progress: MotionValue<number>; city: City }) 
   })
 
   return (
-    <group ref={root}>
+    <group ref={root} position-y={-0.04}>
       <primitive object={scene} />
     </group>
   )
 }
 
-/** Keep the box about the same share of the screen on wide and tall viewports. */
-function CameraRig() {
-  const { camera, size } = useThree()
-  useEffect(() => {
+/** Camera keyframes: straight-on at eye level, and up in front looking about 48° down into the box. */
+const EYE = { position: new Vector3(0, 0.12, 1.5), target: new Vector3(0, 0.04, 0) }
+const ABOVE = { position: new Vector3(0, 1.62, 1.49), target: new Vector3(0, 0.09, 0.03) }
+
+function CameraRig({ progress }: { progress: MotionValue<number> }) {
+  const target = useMemo(() => new Vector3(), [])
+
+  useFrame(({ camera, size, clock }) => {
+    const p = progress.get()
+    const up =
+      ramp(p, BEATS.cameraUp[0], BEATS.cameraUp[1]) * (1 - ramp(p, BEATS.cameraBack[0], BEATS.cameraBack[1]))
+    camera.position.lerpVectors(EYE.position, ABOVE.position, up)
+    target.lerpVectors(EYE.target, ABOVE.target, up)
+    // Very slow idle drift, only while facing the box straight on
+    camera.position.x += Math.sin(clock.elapsedTime * 0.25) * 0.015 * (1 - up)
+
+    // On tall screens pull back so the box keeps its share of the frame, and aim lower to lift it above the copy
     const aspect = size.width / size.height
-    const z = aspect < 1 ? (1.5 / Math.max(aspect, 0.4)) * 0.92 : 1.5
-    camera.position.set(0, (0.5 * z) / 1.5, z)
-    // On tall screens aim lower so the box sits above the copy at the bottom
-    camera.lookAt(0, aspect < 1 ? -0.05 : 0.04, 0)
-  }, [camera, size])
+    if (aspect < 1) {
+      camera.position.sub(target).multiplyScalar((0.92 / Math.max(aspect, 0.4)))
+      target.y -= 0.09 + 0.09 * up
+      camera.position.add(target)
+    }
+    camera.lookAt(target)
+  })
   return null
 }
 
@@ -100,14 +110,14 @@ export default function BoxCanvas({ progress, city }: { progress: MotionValue<nu
       className="story__canvas"
       dpr={[1, 1.75]}
       shadows
-      camera={{ position: [0, 0.5, 1.5], fov: 30, near: 0.05, far: 10 }}
+      camera={{ position: [0, 0.12, 1.5], fov: 30, near: 0.05, far: 10 }}
       gl={{ antialias: true, alpha: true }}
       aria-hidden="true"
     >
       <hemisphereLight args={['#f3e9d7', '#0a3634', 0.9]} />
       <directionalLight position={[0.6, 1.2, 0.8]} intensity={2.4} castShadow shadow-mapSize={[1024, 1024]} />
       <directionalLight position={[-0.8, 0.4, -0.6]} intensity={0.6} color="#e8664e" />
-      <CameraRig />
+      <CameraRig progress={progress} />
       <Box progress={progress} city={city} />
       <ContactShadows position={[0, -0.045, 0]} opacity={0.55} scale={1.4} blur={2.4} far={0.5} color="#061f1e" />
     </Canvas>
